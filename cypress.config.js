@@ -21,18 +21,14 @@ module.exports = defineConfig({
     inlineAssets: true,
     saveAllAttempts: false,
   },
-  e2e:{
-  setupNodeEvents(on, config) {
+  e2e: {
+    setupNodeEvents(on, config) {
       // implement node event listeners here
       require('cypress-mochawesome-reporter/plugin')(on);
       require('@cypress/grep/src/plugin')(config);
       return config;
     },
     baseUrl: 'https://techglobal-training.com',
-  video:true
+    video: true
   },
 });
-
-
-  
-   
